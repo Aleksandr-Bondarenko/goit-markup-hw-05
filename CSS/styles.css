@@ -121,6 +121,26 @@ img {
   padding: 32px 0;
 }
 
+/* .site-nav .list-item {
+  display: flex;
+  align-content: space-around;
+} */
+
+.current {
+  position: relative;
+}
+
+.current::after {
+  position: absolute;
+  bottom: -1px;
+  content: '';
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  background-color: var(--primary-part-logo-color);
+}
+
 .site-nav .link,
 .header-contacts .link {
   font-weight: 500;
@@ -360,7 +380,7 @@ img {
 }
 
 .team-item-thumb {
-  padding: 30px 0;
+  padding: 30px 32px;
 }
 
 .team-member {
@@ -412,30 +432,6 @@ img {
   fill: #afb1b8;
 }
 
-.first-link {
-  padding: 21px 64px;
-}
-
-.second-link {
-  padding: 20px 66px;
-}
-
-.third-link {
-  padding: 25px 65px;
-}
-
-.fourth-link {
-  padding: 25px 46px;
-}
-
-.fifth-link {
-  padding: 23px 56px;
-}
-
-.sixth-link {
-  padding: 23px 42px;
-}
-
 .regular-customers-list {
   display: flex;
   flex-wrap: wrap;
@@ -444,9 +440,6 @@ img {
 }
 
 .regular-customers-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   margin-top: var(--primary-gap);
@@ -455,10 +448,17 @@ img {
   height: 90px;
 }
 
-.regular-customers-item > .action:hover,
-.regular-customers-item > .action:focus,
+.regular-customers-item .link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.regular-customers-item:hover .link,
 .regular-customers-item:hover,
-.regular-customers-item:focus {
+.regular-customers-item .link:focus {
   color: var(--action-color);
   border-color: var(--action-color);
   fill: currentColor;
@@ -611,3 +611,21 @@ img {
   border-radius: 50%;
 }
 /* КОНЕЦ ПОДВАЛА */
+
+.action:hover,
+.action:focus,
+.action-btn:hover,
+.action-btn:focus,
+.regular-customers-item:hover,
+.projects-list-item:hover,
+.projects-list-item:focus,
+.list-social-link .link:hover,
+.list-social-link .link:focus,
+.filter-btn:hover,
+.filter-btn:focus {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
