@@ -64,10 +64,9 @@
     <!--Основной контент страницы-->
     <main>
       <!--Секция герой-->
-
       <section class="hero">
         <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-        <button class="hero-btn action-btn" type="button">
+        <button class="hero-btn action-btn" type="button" data-modal-open>
           Заказать услугу
         </button>
       </section>
@@ -142,6 +141,7 @@
                 width="370"
                 height="294"
               />
+              <h3 class="abilities-subtitle">Десктопные приложения</h3>
             </li>
             <li class="abilities-item">
               <img
@@ -150,6 +150,7 @@
                 width="370"
                 height="294"
               />
+              <h3 class="abilities-subtitle">Мобильные приложения</h3>
             </li>
             <li class="abilities-item">
               <img
@@ -158,6 +159,7 @@
                 width="370"
                 height="294"
               />
+              <h3 class="abilities-subtitle">Дизайнерские решения</h3>
             </li>
           </ul>
         </div>
@@ -451,5 +453,18 @@
         </div>
       </div>
     </footer>
+
+    <!-- Модальное окно -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal-window">
+        <button class="close-modal-btn" type="button" data-modal-close>
+          <svg class="close-modal-icon">
+            <use href="./images/icons.svg#icon-close-modal"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
